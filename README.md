@@ -7,7 +7,7 @@ A : a datastructure which is specially designed to use a special function called
 
 Q : What is the architecture / anatomy of a hash table? :
 
-keys :            Addres / buckets
+Keys :            Addres / buckets
 _________         _________________
 NULL                000[   |    ][x]
 john smith          001[Lisa Smith   | 313123   ][.]
