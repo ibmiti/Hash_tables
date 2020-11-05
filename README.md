@@ -8,7 +8,9 @@ A : a datastructure which is specially designed to use a special function called
 
 Q : What is a Hash function :
 
-A :converts one value to another value.
+A : A hash function takes a group of characters (called a key) and maps it to a value of a certain length (called a hash value or hash). The hash value is representative of the original string of characters, but is normally smaller than the original.
+
+Hashing is done for indexing and locating items in databases because it is easier to find the shorter hash value than the longer string. Hashing is also used in encryption.
 
 Q: what is the effeciency of Hash functions, operations?
 
