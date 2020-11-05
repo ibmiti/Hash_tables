@@ -5,6 +5,25 @@ Q : what is a hash table?
 A : a datastructure which is specially designed to use a special function called 
     Hash function
 
+Q : What is the architecture / anatomy of a hash table? :
+
+keys :            Addres / buckets
+_________         _________________
+NULL                000[   |    ][x]
+john smith          001[Lisa Smith   | 313123   ][.]
+NULL                002[   |    ][x]
+Lisa Smith          003[   |    ][x]
+...                 .............
+Sam Doe             151[ John Smith  / Sandra Dee | 31313  / 31231  ][.]  (collision)
+....                ............
+Sandra Dee          152[ ted Baker  |  3424234  ][.]
+...                 ........
+Teddy bakerino      254[   |    ][x]
+
+
+the above shows a hash table with a Overflow entry or collision at address 151
+
+::::::::::::::::::::::::::::::::::::::::::::::
 
 Q : What is a Hash function :
 
