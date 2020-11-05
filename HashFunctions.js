@@ -39,10 +39,22 @@ class HashTable {
         }
         return undefined
     }
+    // will allow us to iterate over keys within hash table
+    keys(){
+        const keyArray = [];
+        for (let i = 0; i < this.data.length; i++){
+            if (this.data[i]){
+                keyArray.push(this.data[i][0][0])
+            }
+        }
+         return keyArray;
+    }
 }
 
 // setting size of Hash table to 50
 const myHashTable = new HashTable(50);
 myHashTable.set('oranges', 100);
 myHashTable.set('apples', 54);
+myHashTable.set('oranges', 2);
+myHashTable.keys();
 
