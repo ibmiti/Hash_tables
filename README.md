@@ -7,6 +7,8 @@ A : a datastructure which is specially designed to use a special function called
 
 Q : What is the architecture / anatomy of a hash table? :
 
+(( to view table as intended view readme in raw ))
+
 Keys :            Addres / buckets
 _________         _________________
 NULL                000[   |    ][x]
