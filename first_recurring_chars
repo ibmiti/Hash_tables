@@ -1,0 +1,42 @@
+// Question 
+// give an array = [2,5,1,2,3,5,1,2,4];
+// it should return 2
+
+// given an array = [2,1,1,2,3,5,1,2,4];
+// it should return 1
+
+// given an array = [2,3,4,5]
+// it should return undefined
+// run time : O(n^2)
+function firstRecurringCharacter(input){
+    for (let i = 0; i < input.length; i++){
+        // so that we are not comparing 2 to 2 we will start j for the second loops
+        // j = i + 1 denotes that we are moving to the right starting at 'i'
+        // if we did not say i + 1 we would be resetting 'j'
+        for (let j = i + 1; i < input.length; j++){        
+            if (input[i] === input[j]){
+                return input[i];
+            }
+        }
+    }
+    return undefined; 
+}
+ 
+firstRecurringCharacter([2,5,1,2,3,5,1,2,4]);
+
+// using hash table
+// increases memory utilization - con 
+// decreases run time to O(n)  - pro
+function firstRecurringCharacter2(input){
+    let map = {};
+    for (let i = 0; i < input.length; i++){
+        //using input[i] as the key to the hash/obj
+        if(map[input[i]] !== undefined) {
+            return input[i]
+        } else {
+            map[input[i]] = i
+        }
+    }
+    return undefined
+}
+firstRecurringCharacter2([2,5,1,2,3,5,1,2,4]);
